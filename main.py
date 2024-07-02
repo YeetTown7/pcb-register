@@ -25,6 +25,7 @@ def wait():
         break
 
 total=0
+orders=0
 clear_clean()
 print("welcome to the pcb register.")      
 exit=input("press any key to continue.")
@@ -41,6 +42,7 @@ while True:
         x=input("new order? (y/n) ")
         if x == "n": break
         total=0
+        orders+=1
         clear()
     elif choice == "2": 
         clear()
@@ -62,7 +64,8 @@ while True:
         clear_clean()
         break
 
-print("you did {orders}")
+orders+=1
+print(f"you did {orders} order(s)")
 exit=input("press any key to exit.")
 clear_clean()
 sys.exit()
